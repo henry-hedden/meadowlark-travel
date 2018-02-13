@@ -1,0 +1,5 @@
+# ignore packages installed by npm
+node_modules
+
+# any other files that shouldn't be checked go here, e.g. *.bak
+*~
