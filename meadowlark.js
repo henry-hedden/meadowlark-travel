@@ -2,6 +2,7 @@
 /* File:    meadowlark.js
  * Author:  Henry Hedden
  * Created: 2018-02-13
+ * Updated: 2018-02-16
  */
 
 var EXPRESS = require('express');
@@ -32,7 +33,10 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
 //	res.type('text/plain');
 //	res.send('About Meadowlark Travel');
-	res.render('about', {fortune: FORTUNE.getFortune()});
+	res.render('about', {
+		fortune: FORTUNE.getFortune(),
+		pageTestScript: '/qa/tests-about.js'
+	});
 });
 
 // 404 handler (middleware)

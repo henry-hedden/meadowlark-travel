@@ -6,12 +6,25 @@
     {{#if showTests}}
     <link rel="stylesheet" href="/vendor/mocha.css">
     {{/if}}
+    <style>
+      body { margin: 8px; }
+      nav#menu {
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    </style>
+    <script src="/vendor/jquery.js"></script>
   </head>
   <body>
     <!--
       http://www.i2clipart.com/cliparts/7/f/c/f/clipart-meadow-lark-7fcf.png
     -->
     <header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
+    <nav id="menu">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
     {{{body}}}
     {{#if showTests}}
     <div id="mocha"></div>
@@ -19,7 +32,7 @@
     <script src="/vendor/chai.js"></script>
     <script>
       mocha.ui('tdd');
-      var assert = chai.assert'
+      var assert = chai.assert;
     </script>
     <script src="/qa/tests-global.js"></script>
       {{#if pageTestScript}}<script src="{{pageTestScript}}"></script>{{/if}}
