@@ -6,6 +6,7 @@
     {{#if showTests}}
     <link rel="stylesheet" href="/vendor/mocha.css">
     {{/if}}
+    <link rel="icon" type="image/png" href="/img/favicon.png">
     <style>
       body { margin: 8px; }
       nav#menu {
@@ -35,7 +36,7 @@
       var assert = chai.assert;
     </script>
     <script src="/qa/tests-global.js"></script>
-      {{#if pageTestScript}}<script src="{{pageTestScript}}"></script>{{/if}}
+    {{#if pageTestScript}}<script src="{{pageTestScript}}"></script>{{/if}}
     <script>mocha.run();</script>
     {{/if}}
   </body>
